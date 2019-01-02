@@ -3,6 +3,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FilmsListComponent} from '../films-list/films-list.component';
 import { FilmsDetailComponent} from '../films-detail/films-detail.component';
+import { NotFoundComponent} from '../not-found/not-found.component';
 const routes:Routes =[
   {
     path: 'films',
@@ -10,6 +11,14 @@ const routes:Routes =[
   },{
     path: 'films/:id',
     component: FilmsDetailComponent
+  },
+  {
+    path:'404',
+    component:NotFoundComponent
+  },
+  {
+    path:'**',
+    redirectTo: '/404'
   }
 ];
 

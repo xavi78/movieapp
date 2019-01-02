@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import {Router} from "@angular/router";
 import {PeliculasService} from '../peliculas.service';
 
 @Component({
@@ -10,7 +11,7 @@ import {PeliculasService} from '../peliculas.service';
 export class FilmsDetailComponent implements OnInit {
 
   public film:any;
-  constructor(private route:ActivatedRoute, private peliculasService: PeliculasService) {}
+  constructor(private router: Router, private route:ActivatedRoute, private peliculasService: PeliculasService) {}
 
   ngOnInit() {
     this.getFilm();
@@ -23,6 +24,11 @@ export class FilmsDetailComponent implements OnInit {
       film=>{
         this.film =film;
         console.log(this.film);
+      },
+      error=>{
+        console.log("El error ->"+ error);
+        this.router.navigateByUrl('/404');
+
       }
     )
 

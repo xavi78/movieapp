@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { FilmsListComponent } from './films-list/films-list.component';
 import { PeliculasService } from './peliculas.service';
 import { FilmsDetailComponent } from './films-detail/films-detail.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmsListComponent,
-    FilmsDetailComponent
+    FilmsDetailComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
