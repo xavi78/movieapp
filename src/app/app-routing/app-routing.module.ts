@@ -3,6 +3,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FilmsListComponent} from '../films-list/films-list.component';
 import { FilmsDetailComponent} from '../films-detail/films-detail.component';
+import { SeriesComponent } from '../series/series/series.component';
 import { NotFoundComponent} from '../not-found/not-found.component';
 const routes:Routes =[
   {
@@ -11,6 +12,10 @@ const routes:Routes =[
   },{
     path: 'films/:id',
     component: FilmsDetailComponent
+  },
+  {
+    path: 'series',
+    component: SeriesComponent
   },
   {
     path:'404',

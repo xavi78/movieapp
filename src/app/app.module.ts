@@ -10,13 +10,19 @@ import { FilmsListComponent } from './films-list/films-list.component';
 import { PeliculasService } from './peliculas.service';
 import { FilmsDetailComponent } from './films-detail/films-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HeaderComponent } from './commons/headerCo/header.component';
+import { FooterCComponent } from './commons/footer-c/footer-c.component';
+import { SeriesComponent } from './series/series/series.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmsListComponent,
     FilmsDetailComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeaderComponent,
+    FooterCComponent,
+    SeriesComponent
   ],
   imports: [
     BrowserModule,
