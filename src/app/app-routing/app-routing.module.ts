@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FilmsListComponent} from '../films-list/films-list.component';
-
+import { FilmsDetailComponent} from '../films-detail/films-detail.component';
 const routes:Routes =[
   {
-    path: 'list',
+    path: 'films',
     component: FilmsListComponent
+  },{
+    path: 'films/:id',
+    component: FilmsDetailComponent
   }
 ];
 

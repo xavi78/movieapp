@@ -7,17 +7,25 @@ import {PeliculasService} from '../peliculas.service';
 })
 export class FilmsListComponent implements OnInit {
 
-  titulo:string;
+  films: Array<any>;
+  titulo:string="Listado de Películas";
   
   constructor(private peliculasService: PeliculasService) { }
 
   ngOnInit() {
     this.titulo="Listado de Peliculas";
     console.log("Componente listado de peliculas cargado");
+    this.getPeliculas();
   }
   getPeliculas(){
-    this.peliculasService.getPeliculas().subscribe(
-
+    this.peliculasService.getFilms().subscribe(
+      result=>{
+        this.films = result.results;
+        console.log(this.films);
+      },
+      error=>{
+        console.error(error);
+      }
     )
   }
 }
